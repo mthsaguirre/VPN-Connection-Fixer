@@ -1,2 +1,9 @@
 # VPN-Connection-Fixer
-This Python program was created to address internet connection issues that often occur after using a VPN, leading to frequent drops in the connection. It automates a series of network commands that can restore connection stability.
+
+Usage Instructions:
+
+Run the program in your Python environment.
+It will automatically execute the listed commands to restore network connectivity.
+Upon completion, your internet connection should be more stable and reliable.
+Remember to customize the program according to your needs and, if necessary, adjust the commands or remove the shutdown command (if not desired).
+

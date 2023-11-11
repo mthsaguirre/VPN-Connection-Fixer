@@ -1,7 +1,7 @@
-
 import subprocess
+import time
 
-comandos = [
+commands = [
     'ipconfig/release',
     'ipconfig/flushdns',
     'ipconfig/renew',
@@ -10,10 +10,14 @@ comandos = [
     'shutdown /s'
 ]
 
+for command in commands:
+    try:
+        subprocess.run(command, shell=True, check=True)
+        print(f"Command '{command}' executed successfully!")
+    except subprocess.CalledProcessError as e:
+        print(f"Error executing command '{command}': {e}")
 
-for comando in comandos:
-    subprocess.run(comando,
-    shell=True)
+    # Adiciona um tempo de espera de 1 segundo entre os comandos
+    time.sleep(1)
 
-
-    print("Comandos executados com sucesso!")
+print("All commands executed successfully!")

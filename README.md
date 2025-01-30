@@ -1,32 +1,22 @@
+# VPN Connection Fixer
 
-VPN Connection Fixer
-Overview
-This simple Python script is designed to address the inconvenience of an unexpectedly disconnected VPN leading to Wi-Fi disruptions. The program automates the reconnection process, ensuring a seamless transition back to the digital realm.
+Um script Python que resolve quedas repentinas de VPN/Wi-Fi ao automatizar comandos essenciais de rede. Ideal para quem precisa restaurar a conectividade rapidamente sem esforço manual.
 
-Usage
-Clone the Repository:
+## Funcionalidades
+- Verifica se a VPN está desconectada antes de agir.
+- Executa uma sequência de comandos para:
+  - Liberar e renovar o endereço IP.
+  - Limpar o cache DNS.
+  - Configurar um servidor DNS estático (Google 8.8.8.8 por padrão).
+  - Resetar o Winsock (resolve conflitos de conexão).
+- Fornece feedback claro em cada etapa.
 
-bash
-Copy code
-git clone https://github.com/seu-usuario/VPN-Connection-Fixer.git
+## Como Usar
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/mthsaguirre/VPN-Connection-Fixer.git
+
+2. Execute o script quando a VPN falhar:
+```bash
 cd VPN-Connection-Fixer
-Execute the Script:
-
-bash
-Copy code
-python vpn_connection_fixer.py
-Ensure you have the necessary permissions to run network-related commands.
-
-Functionality
-The script executes a series of network commands to release, flush DNS, renew, set DNS, reset Winsock, and initiate a system shutdown. These steps aim to swiftly restore VPN connectivity in scenarios where the VPN disrupts the Wi-Fi connection.
-
-Requirements
-Python 3.x
-Appropriate permissions to execute network-related commands
-Disclaimer
-This script is intended for personal use and may need adjustments based on your network environment. Use with caution and ensure compliance with your organization's policies.
-
-Feel free to contribute, report issues, or suggest improvements!
-
-Happy VPN fixing! 🌐
-
+python vpn_fixer.py
